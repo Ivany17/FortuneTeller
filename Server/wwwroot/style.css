@@ -25,9 +25,50 @@ button{
     color: whitesmoke;
     cursor: pointer;
 }
+#output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+}
 #result{
+    display: none;
     margin: 10px;
     text-align: center;
     color: white;
     font-size: 64px;
+}
+
+.thinking {
+    margin: 15px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: bounce 0.6s infinite alternate ease-in-out;
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    to {
+        transform: translateY(-15px);
+    }
 }
